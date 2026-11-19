@@ -1,1 +1,0 @@
-{"version":3,"file":"main-DKl6ZhXD.js","names":["relList","link","processPreload","mutation","mutations","node","getFetchOpts","fetchOpts"],"sources":["../../src/main.ts"],"sourcesContent":["import './styles/style.scss';\n\nconsole.info('edOK started');\n"],"mappings":"C,6pBAEA,QAAQ,KAAK,cAAc"}

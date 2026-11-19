@@ -1,0 +1,27 @@
+[
+  {
+    "slug": "main-dishes",
+    "name": "Основные блюда",
+    "image": "images/categories/main-dishes.jpg"
+  },
+  {
+    "slug": "soups",
+    "name": "Первые блюда",
+    "image": "images/categories/soups.jpg"
+  },
+  {
+    "slug": "salads",
+    "name": "Салаты",
+    "image": "images/categories/salads.jpg"
+  },
+  {
+    "slug": "desserts",
+    "name": "Десерты",
+    "image": "images/categories/desserts.jpg"
+  },
+  {
+    "slug": "drinks",
+    "name": "Напитки",
+    "image": "images/categories/drinks.jpg"
+  }
+]

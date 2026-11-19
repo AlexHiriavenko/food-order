@@ -1,0 +1,242 @@
+[
+  {
+    "id": 15,
+    "slug": "kotleta-po-kivski-z-pyure-",
+    "name": "Котлета по-киевски с пюре",
+    "description": "Вес: 130/150 г",
+    "price": 240,
+    "discount": null,
+    "category": "main-dishes",
+    "image": "images/products/kotleta-po-kivski-z-pyure-.jpg"
+  },
+  {
+    "id": 16,
+    "slug": "dtichna-ndichka-z-ovochami",
+    "name": "Диетическая индейка с овощами",
+    "description": "Филе индейки, брокколи, спаржа, перец, морковь, специи. Вес: 200 г",
+    "price": 195,
+    "discount": null,
+    "category": "main-dishes",
+    "image": "images/products/dtichna-ndichka-z-ovochami.jpg"
+  },
+  {
+    "id": 17,
+    "slug": "myaso_edok",
+    "name": "Мясо \"ЕдОК\"",
+    "description": "Свинина, помидор, грибы, сыр моцарелла, горчичная заправка, шампиньоны, чеснок. Вес: 230 г",
+    "price": 230,
+    "discount": 15,
+    "category": "main-dishes",
+    "image": "images/products/myaso_edok.jpg"
+  },
+  {
+    "id": 18,
+    "slug": "rebra-v-grchichno-medovomu-s",
+    "name": "Рёбра в горчично-медовом соусе",
+    "description": "Вес: 400/40 г",
+    "price": 355,
+    "discount": 20,
+    "category": "main-dishes",
+    "image": "images/products/rebra-v-grchichno-medovomu-s.jpg"
+  },
+  {
+    "id": 19,
+    "slug": "shashlik-z-svinini",
+    "name": "Шашлык из свинины",
+    "description": "Вес: 200 г",
+    "price": 280,
+    "discount": null,
+    "category": "main-dishes",
+    "image": "images/products/shashlik-z-svinini.jpg"
+  },
+  {
+    "id": 20,
+    "slug": "smazhena-kartoplya-po-misliv",
+    "name": "Жареный картофель по-охотничьи",
+    "description": "Картофель, охотничьи колбаски, бекон, лук, кетчуп. Вес: 250 г",
+    "price": 160,
+    "discount": 10,
+    "category": "main-dishes",
+    "image": "images/products/smazhena-kartoplya-po-misliv.jpg"
+  },
+  {
+    "id": 10,
+    "slug": "sirniy-krem-sup",
+    "name": "Сырный крем-суп",
+    "description": "Картофель, бульон, сливочное масло, сливки, плавленый сыр, крутоны, бекон. Вес: 350 г",
+    "price": 190,
+    "discount": null,
+    "category": "soups",
+    "image": "images/products/sirniy-krem-sup.jpg"
+  },
+  {
+    "id": 11,
+    "slug": "fnska-ukha",
+    "name": "Финская уха",
+    "description": "Картофель, лук, сливки, зелень, морковь, масло, лосось, шафран. Вес: 300 г",
+    "price": 230,
+    "discount": 20,
+    "category": "soups",
+    "image": "images/products/fnska-ukha.jpg"
+  },
+  {
+    "id": 12,
+    "slug": "krem-sup-z-blimi-gribami",
+    "name": "Крем-суп с белыми грибами",
+    "description": "Белые грибы, шампиньоны, лук, куриный бульон, сливки, крутоны, зелень. Вес: 300 г",
+    "price": 195,
+    "discount": null,
+    "category": "soups",
+    "image": "images/products/krem-sup-z-blimi-gribami.jpg"
+  },
+  {
+    "id": 13,
+    "slug": "kuryachiy-bulyon",
+    "name": "Куриный бульон с лапшой",
+    "description": "Куриное филе, лапша, куриный бульон, зелень, куриное яйцо. Вес: 300 г",
+    "price": 130,
+    "discount": 10,
+    "category": "soups",
+    "image": "images/products/kuryachiy-bulyon.jpg"
+  },
+  {
+    "id": 14,
+    "slug": "borsch-ukranskiy",
+    "name": "Борщ украинский",
+    "description": "Свинина, картофель, морковь, свекла, томатная заправка, зелень, сметана, капуста, пампушки с чесночной заправкой. Вес: 350/50 г",
+    "price": 170,
+    "discount": null,
+    "category": "soups",
+    "image": "images/products/borsch-ukranskiy.jpg"
+  },
+  {
+    "id": 4,
+    "slug": "salat-z-krevetkami-gril",
+    "name": "Салат с креветками",
+    "description": "Креветки, листья салата, перец, огурец, лимон, соус бальзамик, соус провансаль, кунжут, томаты черри. Вес: 250 г",
+    "price": 325,
+    "discount": 15,
+    "category": "salads",
+    "image": "images/products/salat-z-krevetkami-gril.jpg"
+  },
+  {
+    "id": 5,
+    "slug": "tsezar",
+    "name": "Цезарь",
+    "description": "Бекон, пармезан, куриное филе, томаты, яйцо, салат айсберг, крутоны, заправка. Вес: 250 г",
+    "price": 235,
+    "discount": 10,
+    "category": "salads",
+    "image": "images/products/tsezar.jpg"
+  },
+  {
+    "id": 6,
+    "slug": "olv-domashn",
+    "name": "Оливье домашний",
+    "description": "Картофель, морковь, яйцо, свежий и солёный огурец, горошек, майонез, балык. Вес: 300 г",
+    "price": 210,
+    "discount": null,
+    "category": "salads",
+    "image": "images/products/olv-domashn.jpg"
+  },
+  {
+    "id": 7,
+    "slug": "oseledets-pd-shuboyu",
+    "name": "Селёдка под шубой",
+    "description": "Картофель, морковь, свекла, сельдь, маринованный лук, яблоко, перепелиные яйца, майонез, зелень.",
+    "price": 225,
+    "discount": null,
+    "category": "salads",
+    "image": "images/products/oseledets-pd-shuboyu.jpg"
+  },
+  {
+    "id": 8,
+    "slug": "gretskiy",
+    "name": "Греческий",
+    "description": "Сыр фета, огурец, томаты, болгарский перец, лук, маслины. Вес: 250 г",
+    "price": 199,
+    "discount": null,
+    "category": "salads",
+    "image": "images/products/gretskiy.jpg"
+  },
+  {
+    "id": 9,
+    "slug": "mimoza",
+    "name": "Мимоза с тунцом",
+    "description": "Консервированный тунец, картофель, морковь, маринованный лук, куриные яйца, сыр гауда, майонез, зелень. Вес: 350 г",
+    "price": 220,
+    "discount": null,
+    "category": "salads",
+    "image": "images/products/mimoza.jpg"
+  },
+  {
+    "id": 21,
+    "slug": "chervon-vareniki-z-tvorogo",
+    "name": "Красные вареники с творогом и вишнёвым соусом",
+    "description": "Заварное вишнёвое тесто, творог, вишнёвый соус. Вес: 200/100 г",
+    "price": 180,
+    "discount": null,
+    "category": "desserts",
+    "image": "images/products/chervon-vareniki-z-tvorogo.jpg"
+  },
+  {
+    "id": 22,
+    "slug": "vafelniy-tortik",
+    "name": "Вафельный тортик",
+    "description": "Вес: 120 г",
+    "price": 90,
+    "discount": null,
+    "category": "desserts",
+    "image": "images/products/vafelniy-tortik.jpg"
+  },
+  {
+    "id": 23,
+    "slug": "sirniki",
+    "name": "Сырники со сметаной",
+    "description": "Вес: 120/50 г",
+    "price": 145,
+    "discount": null,
+    "category": "desserts",
+    "image": "images/products/sirniki.jpg"
+  },
+  {
+    "id": 24,
+    "slug": "morozivo",
+    "name": "Мороженое",
+    "description": "Вес: 150 г",
+    "price": 100,
+    "discount": 15,
+    "category": "desserts",
+    "image": "images/products/morozivo.jpg"
+  },
+  {
+    "id": 1,
+    "slug": "americano",
+    "name": "Кофе Americano",
+    "description": "Ароматный кофе из Бразилии",
+    "price": 40,
+    "discount": null,
+    "category": "drinks",
+    "image": "images/products/americano.jpg"
+  },
+  {
+    "id": 2,
+    "slug": "chaj",
+    "name": "Чай",
+    "description": "Индийский чёрный чай",
+    "price": 30,
+    "discount": null,
+    "category": "drinks",
+    "image": "images/products/chaj.webp"
+  },
+  {
+    "id": 3,
+    "slug": "uzvar",
+    "name": "Узвар",
+    "description": "Сладкий напиток из сушёных фруктов и свежих ягод",
+    "price": 50,
+    "discount": null,
+    "category": "drinks",
+    "image": "images/products/uzvar.jpg"
+  }
+]
