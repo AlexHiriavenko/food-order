@@ -1,0 +1,22 @@
+@use "./reset";
+@use "./variables" as vars;
+@use "../components/shared/header/header";
+@use "../components/shared/footer/footer";
+@use "../components/home/hero/hero";
+@use "../components/page-stub";
+
+:root {
+  font-family: "Inter", system-ui, Arial, sans-serif;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+#app {
+  min-height: 100%;
+}
+
+.main {
+  max-width: vars.$desktop;
+  margin-inline: auto;
+}

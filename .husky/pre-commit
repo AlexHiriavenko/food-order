@@ -1,0 +1,10 @@
+echo "🔎 pre-commit: проверка TypeScript (tsc --noEmit)..."
+
+if ! npm run typecheck --silent; then
+  echo ""
+  echo "❌ Коммит отклонён: сборка TypeScript не проходит (есть ошибки компиляции)."
+  echo "   Исправьте ошибки типов, указанные выше, и повторите коммит."
+  exit 1
+fi
+
+echo "✅ TypeScript: ошибок нет."
