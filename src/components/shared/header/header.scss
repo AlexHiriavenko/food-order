@@ -1,50 +1,59 @@
 .header {
-  display: flex;
-  align-items: center;
-  padding: 8px 40px;
-  background-color: black;
-  color: white;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 16px;
+	padding: 8px clamp(16px, 4vw, 40px);
+	background-color: black;
+	color: white;
 
-  &__logo {
-    font-weight: 600;
-    font-size: 24px;
-    color: inherit;
-    text-decoration: none;
-    display: inline-flex;
-  }
+	&__logo {
+		display: inline-flex;
+	}
 
-  &__logo-img {
-    height: 56px;
-    width: auto;
-    object-fit: contain;
-  }
+	&__logo-img {
+		height: 56px;
+		width: auto;
+		object-fit: contain;
+	}
+
+	&__nav {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px 24px;
+	}
+
+	&__link {
+		color: inherit;
+		text-decoration: none;
+		font-weight: 600;
+		padding: 6px 0;
+		border-bottom: 2px solid transparent;
+
+		&:hover {
+			border-bottom-color: #f5b50a;
+		}
+	}
+
+	&__logo:focus-visible,
+	&__link:focus-visible {
+		outline: 2px solid #f5b50a;
+		outline-offset: 4px;
+	}
+
+	@media (max-width: 480px) {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 8px;
+
+		&__nav {
+			gap: 4px 16px;
+		}
+	}
 }
 
-.header {
-  justify-content: space-between;
-
-  &__nav {
-    display: flex;
-    gap: 32px;
-  }
-
-  &__link {
-    color: inherit;
-    text-decoration: none;
-    font-weight: 600;
-    padding-bottom: 2px;
-    border-bottom: 2px solid transparent;
-
-    &:hover {
-      border-bottom-color: #f5b50a;
-    }
-  }
-}
-
-// Активный пункт меню определяется по <body data-page="...">
 [data-page="home"] .header__link--home,
 [data-page="menu"] .header__link--menu,
 [data-page="discounts"] .header__link--discounts {
-  border-bottom-color: #f5b50a;
-  pointer-events: none;
+	border-bottom-color: #f5b50a;
 }
