@@ -3,7 +3,7 @@
 	align-items: center;
 	justify-content: space-between;
 	gap: 16px;
-	padding: 8px clamp(16px, 4vw, 40px);
+	padding: 8px max(40px, calc((100% - 1360px) / 2));
 	background-color: black;
 	color: white;
 
@@ -20,6 +20,7 @@
 	&__nav {
 		display: flex;
 		flex-wrap: wrap;
+		justify-content: center;
 		gap: 8px 24px;
 	}
 
@@ -41,9 +42,12 @@
 		outline-offset: 4px;
 	}
 
+	@media (max-width: 600px) {
+		padding-inline: 20px;
+	}
+
 	@media (max-width: 480px) {
 		flex-direction: column;
-		align-items: flex-start;
 		gap: 8px;
 
 		&__nav {
