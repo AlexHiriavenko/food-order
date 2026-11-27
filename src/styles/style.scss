@@ -3,6 +3,7 @@
 @use "../components/shared/header/header";
 @use "../components/shared/footer/footer";
 @use "../components/home/hero/hero";
+@use "../components/home/products/products";
 @use "../components/page-stub";
 
 :root {
@@ -12,11 +13,21 @@
   -webkit-font-smoothing: antialiased;
 }
 
+body {
+  min-height: 100vh;
+  color: #fff;
+  background: #24343b;
+}
+
 #app {
-  min-height: 100%;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 .main {
+  width: 100%;
   max-width: vars.$desktop;
   margin-inline: auto;
+  flex: 1;
 }
