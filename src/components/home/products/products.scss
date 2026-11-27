@@ -109,6 +109,7 @@
     background: transparent;
     font: inherit;
     cursor: pointer;
+    text-decoration: none;
 
     &:hover,
     &:focus-visible,
@@ -122,10 +123,6 @@
       outline-offset: 2px;
     }
 
-    &:disabled {
-      cursor: default;
-      opacity: 1;
-    }
   }
 
   @media (max-width: 900px) {

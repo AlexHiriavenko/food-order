@@ -69,25 +69,52 @@ function createProductCard(product: Product): HTMLLIElement {
   return item;
 }
 
-function createPageButton(
+function getPageFromUrl(totalPages: number): number {
+  const page = Number(new URLSearchParams(window.location.search).get("page"));
+
+  if (!Number.isInteger(page) || page < 1) return 1;
+
+  return Math.min(page, totalPages);
+}
+
+function getPageUrl(page: number): string {
+  const url = new URL(window.location.href);
+  url.searchParams.set("page", String(page));
+  return url.toString();
+}
+
+function createPageLink(
   page: number,
   currentPage: number,
   onSelect: (page: number) => void,
-): HTMLButtonElement {
-  const button = document.createElement("button");
-  button.className = "home-products__page-button";
-  button.type = "button";
-  button.textContent = String(page);
-  button.setAttribute("aria-label", `Страница ${page}`);
+): HTMLAnchorElement {
+  const link = document.createElement("a");
+  link.className = "home-products__page-button";
+  link.href = getPageUrl(page);
+  link.textContent = String(page);
+  link.setAttribute("aria-label", `Страница ${page}`);
 
   if (page === currentPage) {
-    button.classList.add("home-products__page-button--active");
-    button.setAttribute("aria-current", "page");
-    button.disabled = true;
+    link.classList.add("home-products__page-button--active");
+    link.setAttribute("aria-current", "page");
   }
 
-  button.addEventListener("click", () => onSelect(page));
-  return button;
+  link.addEventListener("click", (event) => {
+    if (
+      event.button !== 0 ||
+      event.ctrlKey ||
+      event.metaKey ||
+      event.shiftKey ||
+      event.altKey
+    ) {
+      return;
+    }
+
+    event.preventDefault();
+    if (page !== currentPage) onSelect(page);
+  });
+
+  return link;
 }
 
 export async function renderHomeProducts(): Promise<void> {
@@ -116,7 +143,7 @@ export async function renderHomeProducts(): Promise<void> {
     }
 
     const totalPages = Math.ceil(products.length / PRODUCTS_PER_PAGE);
-    let currentPage = 1;
+    let currentPage = getPageFromUrl(totalPages);
 
     const renderPage = (page: number): void => {
       currentPage = page;
@@ -126,14 +153,23 @@ export async function renderHomeProducts(): Promise<void> {
       grid.replaceChildren(...pageProducts.map(createProductCard));
       pagination.replaceChildren(
         ...Array.from({ length: totalPages }, (_, index) =>
-          createPageButton(index + 1, currentPage, renderPage),
+          createPageLink(index + 1, currentPage, selectPage),
         ),
       );
+    };
+
+    const selectPage = (page: number): void => {
+      window.history.pushState({}, "", getPageUrl(page));
+      renderPage(page);
     };
 
     status.remove();
     pagination.hidden = totalPages <= 1;
     renderPage(currentPage);
+
+    window.addEventListener("popstate", () => {
+      renderPage(getPageFromUrl(totalPages));
+    });
   } catch (error) {
     status.textContent = "Не удалось загрузить меню. Обновите страницу.";
     console.error(error);
