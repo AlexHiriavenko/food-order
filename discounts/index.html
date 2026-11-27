@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="/food-order/favicon.ico" />
     <title>Скидки | edOK</title>
-    <script type="module" crossorigin src="/food-order/assets/main-BtRKhOqR.js"></script>
-    <link rel="stylesheet" crossorigin href="/food-order/assets/main-B3QdALJh.css">
+    <script type="module" crossorigin src="/food-order/assets/main-NWcFV6qK.js"></script>
+    <link rel="stylesheet" crossorigin href="/food-order/assets/main-Dl8LPJOc.css">
   </head>
 
   <body data-page="discounts">
@@ -15,7 +15,17 @@
         <a class="header__logo" href="/food-order/">
           <img class="header__logo-img" src="/food-order/assets/logo-DYj7MIrW.png" alt="edOK" width="370" height="300" />
         </a>
-        <nav class="header__nav" aria-label="Основная навигация">
+        <button
+          class="header__toggle"
+          type="button"
+          aria-label="Меню сайта"
+          aria-controls="header-navigation"
+          aria-expanded="false"
+          hidden
+        >
+          <span class="header__toggle-icon" aria-hidden="true"></span>
+        </button>
+        <nav class="header__nav" id="header-navigation" aria-label="Основная навигация">
           <a class="header__link header__link--home" href="/food-order/">Главная</a>
           <a class="header__link header__link--menu" href="/food-order/menu/">Меню</a>
           <a class="header__link header__link--discounts" href="/food-order/discounts/">Скидки</a>
@@ -28,7 +38,21 @@
         </section>
       </main>
       <footer class="footer">
-        <p>© edOK</p>
+        <a class="footer__logo" href="/food-order/" aria-label="edOK — главная">
+          <img
+            class="footer__logo-img"
+            src="/food-order/assets/logo-DYj7MIrW.png"
+            alt="edOK"
+            width="370"
+            height="300"
+          />
+        </a>
+      
+        <address class="footer__contacts">
+          <p class="footer__contact">city street 1</p>
+          <a class="footer__contact" href="tel:+11111111111">+1 111 111 1111</a>
+          <a class="footer__contact" href="mailto:food-order@gmail.com">food-order@gmail.com</a>
+        </address>
       </footer>
     </div>
 
