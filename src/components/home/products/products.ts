@@ -86,7 +86,6 @@ function getPageUrl(page: number): string {
 function createPageLink(
   page: number,
   currentPage: number,
-  onSelect: (page: number) => void,
 ): HTMLAnchorElement {
   const link = document.createElement("a");
   link.className = "home-products__page-button";
@@ -98,21 +97,6 @@ function createPageLink(
     link.classList.add("home-products__page-button--active");
     link.setAttribute("aria-current", "page");
   }
-
-  link.addEventListener("click", (event) => {
-    if (
-      event.button !== 0 ||
-      event.ctrlKey ||
-      event.metaKey ||
-      event.shiftKey ||
-      event.altKey
-    ) {
-      return;
-    }
-
-    event.preventDefault();
-    if (page !== currentPage) onSelect(page);
-  });
 
   return link;
 }
@@ -143,33 +127,23 @@ export async function renderHomeProducts(): Promise<void> {
     }
 
     const totalPages = Math.ceil(products.length / PRODUCTS_PER_PAGE);
-    let currentPage = getPageFromUrl(totalPages);
+    const currentPage = getPageFromUrl(totalPages);
 
     const renderPage = (page: number): void => {
-      currentPage = page;
-      const start = (currentPage - 1) * PRODUCTS_PER_PAGE;
+      const start = (page - 1) * PRODUCTS_PER_PAGE;
       const pageProducts = products.slice(start, start + PRODUCTS_PER_PAGE);
 
       grid.replaceChildren(...pageProducts.map(createProductCard));
       pagination.replaceChildren(
         ...Array.from({ length: totalPages }, (_, index) =>
-          createPageLink(index + 1, currentPage, selectPage),
+          createPageLink(index + 1, page),
         ),
       );
-    };
-
-    const selectPage = (page: number): void => {
-      window.history.pushState({}, "", getPageUrl(page));
-      renderPage(page);
     };
 
     status.remove();
     pagination.hidden = totalPages <= 1;
     renderPage(currentPage);
-
-    window.addEventListener("popstate", () => {
-      renderPage(getPageFromUrl(totalPages));
-    });
   } catch (error) {
     status.textContent = "Не удалось загрузить меню. Обновите страницу.";
     console.error(error);
