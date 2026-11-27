@@ -1,3 +1,57 @@
 .footer {
-  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 20px max(40px, calc((100% - 1360px) / 2));
+  color: #fff;
+  background: #000;
+
+  &__logo {
+    display: inline-flex;
+    flex: 0 0 auto;
+  }
+
+  &__logo-img {
+    width: auto;
+    height: 72px;
+    object-fit: contain;
+  }
+
+  &__contacts {
+    display: grid;
+    gap: 6px;
+    text-align: right;
+    font-style: normal;
+  }
+
+  &__contact {
+    margin: 0;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  a.footer__contact:hover {
+    color: #f5b50a;
+  }
+
+  &__logo:focus-visible,
+  a.footer__contact:focus-visible {
+    outline: 2px solid #f5b50a;
+    outline-offset: 4px;
+  }
+
+  @media (max-width: 600px) {
+    padding-inline: 20px;
+  }
+
+  @media (max-width: 480px) {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+
+    &__contacts {
+      text-align: left;
+    }
+  }
 }

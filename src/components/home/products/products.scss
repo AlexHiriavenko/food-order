@@ -1,0 +1,145 @@
+.home-products {
+  padding: 40px 40px 72px;
+
+  &__title {
+    margin: 0 0 32px;
+    text-align: center;
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.2;
+  }
+
+  &__status {
+    text-align: center;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__card {
+    display: flex;
+    min-width: 0;
+    overflow: hidden;
+    flex-direction: column;
+    border-radius: 8px;
+    color: #24343b;
+    background: #fff;
+    box-shadow: 0 4px 18px rgb(0 0 0 / 12%);
+  }
+
+  &__image {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+  }
+
+  &__content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  &__name {
+    margin: 0 0 10px;
+    font-size: 22px;
+    line-height: 1.25;
+  }
+
+  &__description {
+    display: -webkit-box;
+    overflow: hidden;
+    margin: 0 0 20px;
+    color: #57646a;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+
+  &__price-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: auto;
+  }
+
+  &__price {
+    color: #24343b;
+    font-size: 20px;
+  }
+
+  &__old-price {
+    color: #7a858a;
+  }
+
+  &__discount {
+    margin-left: auto;
+    padding: 3px 8px;
+    border-radius: 999px;
+    color: #fff;
+    background: #d34836;
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  &__pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 36px;
+
+    &[hidden] {
+      display: none;
+    }
+  }
+
+  &__page-button {
+    display: grid;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    place-items: center;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    color: #fff;
+    background: transparent;
+    font: inherit;
+    cursor: pointer;
+
+    &:hover,
+    &:focus-visible,
+    &--active {
+      color: #24343b;
+      background: #fff;
+    }
+
+    &:focus-visible {
+      outline: 3px solid #f5b50a;
+      outline-offset: 2px;
+    }
+
+    &:disabled {
+      cursor: default;
+      opacity: 1;
+    }
+  }
+
+  @media (max-width: 900px) {
+    &__grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 600px) {
+    padding: 32px 20px 48px;
+
+    &__grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  }
+}
