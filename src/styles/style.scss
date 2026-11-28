@@ -5,8 +5,11 @@
 @use "../components/shared/product-card/product-card";
 @use "../components/home/products/products";
 @use "../components/discounts/discounts";
+@use "../components/cart/cart";
 
 :root {
+  --header-height: 72px;
+
   font-family: "Inter", system-ui, Arial, sans-serif;
   line-height: 1.5;
   text-rendering: optimizeLegibility;
@@ -15,6 +18,7 @@
 
 body {
   min-height: 100vh;
+  padding-top: var(--header-height);
   color: #fff;
   background: #24343b;
 }

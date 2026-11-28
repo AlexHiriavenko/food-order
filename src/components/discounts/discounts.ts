@@ -1,7 +1,5 @@
-import {
-  createProductCard,
-  type Product,
-} from "../shared/product-card/product-card";
+import { createProductCard } from "../shared/product-card/product-card";
+import type { Product } from "../shared/product/product.types";
 
 const baseUrl = import.meta.env.BASE_URL;
 
