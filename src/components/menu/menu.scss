@@ -79,24 +79,6 @@
 		line-height: 1.2;
 	}
 
-	&__categories>li:has(> h2) {
-		overflow: hidden;
-		border-radius: 4px;
-		background: #fff;
-		color: #24343b;
-
-		img {
-			width: 100%;
-			aspect-ratio: 16 / 10;
-			object-fit: cover;
-		}
-
-		h2,
-		p {
-			margin: 12px 16px;
-		}
-	}
-
 	>a+.menu__categories {
 		margin-top: 16px;
 	}

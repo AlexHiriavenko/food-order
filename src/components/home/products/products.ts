@@ -1,73 +1,10 @@
-interface Product {
-  id: number;
-  name: string;
-  description: string;
-  price: number;
-  discount: number | null;
-  image: string;
-}
+import {
+  createProductCard,
+  type Product,
+} from "../../shared/product-card/product-card";
 
 const PRODUCTS_PER_PAGE = 6;
 const baseUrl = import.meta.env.BASE_URL;
-
-function formatPrice(price: number): string {
-  return new Intl.NumberFormat("ru-RU", {
-    maximumFractionDigits: 0,
-  }).format(price);
-}
-
-function createProductCard(product: Product): HTMLLIElement {
-  const item = document.createElement("li");
-  item.className = "home-products__card";
-
-  const image = document.createElement("img");
-  image.className = "home-products__image";
-  image.src = `${baseUrl}${product.image}`;
-  image.alt = product.name;
-  image.loading = "lazy";
-  image.width = 420;
-  image.height = 260;
-
-  const content = document.createElement("div");
-  content.className = "home-products__content";
-
-  const name = document.createElement("h3");
-  name.className = "home-products__name";
-  name.textContent = product.name;
-
-  const description = document.createElement("p");
-  description.className = "home-products__description";
-  description.textContent = product.description;
-
-  const priceRow = document.createElement("div");
-  priceRow.className = "home-products__price-row";
-
-  const currentPrice = document.createElement("strong");
-  currentPrice.className = "home-products__price";
-
-  if (product.discount) {
-    const discountedPrice = product.price * (1 - product.discount / 100);
-    currentPrice.textContent = formatPrice(discountedPrice);
-
-    const oldPrice = document.createElement("del");
-    oldPrice.className = "home-products__old-price";
-    oldPrice.textContent = formatPrice(product.price);
-
-    const discount = document.createElement("span");
-    discount.className = "home-products__discount";
-    discount.textContent = `−${product.discount}%`;
-
-    priceRow.append(currentPrice, oldPrice, discount);
-  } else {
-    currentPrice.textContent = formatPrice(product.price);
-    priceRow.append(currentPrice);
-  }
-
-  content.append(name, description, priceRow);
-  item.append(image, content);
-
-  return item;
-}
 
 function getPageFromUrl(totalPages: number): number {
   const page = Number(new URLSearchParams(window.location.search).get("page"));

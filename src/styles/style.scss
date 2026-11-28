@@ -2,6 +2,7 @@
 @use "./variables" as vars;
 @use "../components/shared/header/header";
 @use "../components/shared/footer/footer";
+@use "../components/shared/product-card/product-card";
 @use "../components/home/products/products";
 @use "../components/page-stub";
 
