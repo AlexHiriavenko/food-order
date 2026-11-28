@@ -1,14 +1,11 @@
+import {
+  createProductCard,
+  type Product,
+} from "../shared/product-card/product-card";
+
 interface Category {
   slug: string;
   name: string;
-  image: string;
-}
-
-interface Product {
-  name: string;
-  description: string;
-  price: number;
-  category: string;
   image: string;
 }
 
@@ -49,23 +46,6 @@ function createCategoryCard(category: Category): HTMLLIElement {
 
   link.append(image, name);
   item.append(link);
-
-  return item;
-}
-
-function createProductCard(product: Product): HTMLLIElement {
-  const item = document.createElement("li");
-
-  const name = document.createElement("h2");
-  name.textContent = product.name;
-
-  const description = document.createElement("p");
-  description.textContent = product.description;
-
-  const price = document.createElement("p");
-  price.textContent = `Цена: ${product.price}`;
-
-  item.append(createImage(product.image), name, description, price);
 
   return item;
 }
