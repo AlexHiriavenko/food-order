@@ -10,6 +10,7 @@ const pages = {
   home: resolve(root, 'index.html'),
   menu: resolve(root, 'menu/index.html'),
   discounts: resolve(root, 'discounts/index.html'),
+  cart: resolve(root, 'cart/index.html'),
 };
 
 export default defineConfig({
