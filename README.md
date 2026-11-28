@@ -1,6 +1,10 @@
 # food-order
 
-Облегчённая копия [Restaurant-Vue](https://alexhiriavenko.github.io/Restaurant-Vue/) на TypeScript без фреймворков (Vite + Handlebars partials + SCSS, MPA).
+Food Order — многостраничное веб-приложение для просмотра меню ресторана и формирования заказа. Пользователь может выбирать блюда по категориям, добавлять их в корзину, менять количество позиций и просматривать актуальные акции. Корзина сохраняется между сеансами в локальном хранилище браузера.
+
+## Деплой
+
+[https://alexhiriavenko.github.io/food-order/](https://alexhiriavenko.github.io/food-order/)
 
 ## Скрипты
 
